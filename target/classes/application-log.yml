@@ -1,0 +1,10 @@
+logging:
+  pattern:
+    console: "%d - %msg%n"
+#    console控制台格式；%d表示日期；%msg表示内容；%n换行
+#    path: /var/log/tomcat/
+#    和file要一个
+    file: /var/log/tomcat/sell.log
+#    level，日志级别（可以指定到类）
+    level:
+      com.imooc.LoggerTest: debug

@@ -1,0 +1,35 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: Zondar_20191018_ps
+    url: jdbc:mysql://47.92.175.230/ordring?characterEncoding=utf-8&useSSL=false
+#Loading class `com.mysql.jdbc.Driver'. This is deprecated. The new driver class is `com.mysql.cj.jdbc.Driver'.
+#整合spring boot项目过程中出现的，用了最新的mysql 连接驱动
+#需要将 com.mysql.jdbc.Driver  改为  com.mysql.cj.jdbc.Driver
+  jackson:
+    default-property-inclusion: non_null
+  redis:
+    host: 172.26.177.115
+    port: 6379
+wechat:
+  mpAppId: wxb7ab501cd35f2e1c
+  mpAppSecret: f78d2ebf9c399e8a9221364a5520248d
+#  openAppId: wx6ad144e54af67d87
+#  openAppSecret: 91a2ff6d38a2bbccfb7e9f9079108e2e
+#  mchId: 1601868819
+#  mchKey: LAbzsxj2020ASDFGHJ123455EFRGH2DR
+#  keyPath: /var/weixin_cert/h5.p12
+#  notifyUrl: http://www.zondarchina.com/zs/pay/notify
+#  templateId:
+#    orderStatus: e-Cqq67QxD6YNI41iRiqawEYdFavW_7pc7LyEMb-yeQ
+
+projecturl:
+  wechatMpAuthorize: http://www.zondarchina.com/od/wechat/userInfo
+#  wechatMpAuthorize: localhost/
+  wechatOpenAuthorize: http://www.zondarchina.com
+
+server:
+  port: 80
+  servlet:
+    context-path: /od
