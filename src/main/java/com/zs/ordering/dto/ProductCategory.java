@@ -1,5 +1,6 @@
 package com.zs.ordering.dto;
 
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
@@ -24,6 +25,12 @@ public class ProductCategory {
     private String categoryName;
     /*类目编号*/
     private int categoryType;
+    /*备注，在数据库中没有对应字段*/
+    //1.使用关键字transient不参与实例化过程
+    //2.使用Static关键字
+    //3.使用 @TableField(exist = false)，数据库中不存在；默认是@TableField(exist = true)数据库中存在
+    @TableField(exist = false)
+    private String remark;
 
 
 

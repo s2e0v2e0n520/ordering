@@ -7,7 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import javax.annotation.ManagedBean;
 
 @SpringBootApplication
-@MapperScan("com.zs.ordering")
+@MapperScan("com.zs.ordering.dao")
 public class OrderingApplication {
 
     public static void main(String[] args) {

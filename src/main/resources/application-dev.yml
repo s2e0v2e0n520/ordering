@@ -30,6 +30,6 @@ projecturl:
   wechatOpenAuthorize: http://www.zondarchina.com
 
 server:
-  port: 80
+  port: 8084
   servlet:
     context-path: /od
