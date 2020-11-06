@@ -9,20 +9,29 @@ spring:
 #需要将 com.mysql.jdbc.Driver  改为  com.mysql.cj.jdbc.Driver
   jackson:
     default-property-inclusion: non_null
-  redis:
-    host: 172.26.177.115
-    port: 6379
+#  redis:
+#    host: 172.26.177.115
+#    port: 6379
 wechat:
-  mpAppId: wxb7ab501cd35f2e1c
-  mpAppSecret: f78d2ebf9c399e8a9221364a5520248d
+  weappAppId: wxb7ab501cd35f2e1c
+  weappAppSecret: f78d2ebf9c399e8a9221364a5520248d
+  mpAppId: wx132fd55c9bafc682
+  mpAppSecret: 57a946b23d16c3eb189c6b9ab09ae6d4
 #  openAppId: wx6ad144e54af67d87
 #  openAppSecret: 91a2ff6d38a2bbccfb7e9f9079108e2e
 #  mchId: 1601868819
 #  mchKey: LAbzsxj2020ASDFGHJ123455EFRGH2DR
 #  keyPath: /var/weixin_cert/h5.p12
 #  notifyUrl: http://www.zondarchina.com/zs/pay/notify
-#  templateId:
-#    orderStatus: e-Cqq67QxD6YNI41iRiqawEYdFavW_7pc7LyEMb-yeQ
+  weapp_templateId:
+    orderStatus: JK2bSyJljS8cRg7HShCg3U9BZjyrh7q3H7zY9ZzF-xc
+    payStatus: aXtSwl3Tti-J_miLN1PuLVck3WkYRAFfVVopqMRd3oo
+    test: 0EAFAKcYw_2KQCaILvBjCKbrPVm9MWAjDnTQ6okqPCk
+  mp_templateId :
+    appointment: u8tz7D3mJKR5dNMwG2SZtofoc9zfcTytsKVsIjay5SU
+    IssuanceVoucher: 9SgExl6tCofW6ZQ-2l-RKB27hAJtFI5PxspVFRroakI
+
+
 
 projecturl:
   wechatMpAuthorize: http://www.zondarchina.com/od/wechat/userInfo
@@ -30,6 +39,12 @@ projecturl:
   wechatOpenAuthorize: http://www.zondarchina.com
 
 server:
-  port: 80
+  port: 8084
   servlet:
     context-path: /od
+
+api:
+  apiUrl:
+    subscribeMessage: https://api.weixin.qq.com/cgi-bin/message/subscribe/send?access_token=
+    doctorid: 666
+    uniformMessage: https://api.weixin.qq.com/cgi-bin/message/wxopen/template/uniform_send?access_token=

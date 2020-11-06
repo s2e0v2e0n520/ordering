@@ -65,7 +65,8 @@ public class WechatController {
         } catch (WxErrorException e) {
 //            e.printStackTrace();
             log.error("[微信网页授权]{}",e);
-//            throw new
+            log.error("[wxMpOAuth2AccessToken=======]{}",wxMpOAuth2AccessToken);
+
         }
         //获取openid
         String openId = wxMpOAuth2AccessToken.getOpenId();

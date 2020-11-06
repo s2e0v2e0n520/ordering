@@ -71,6 +71,13 @@
             <artifactId>weixin-java-mp</artifactId>
             <version>2.7.0</version>
         </dependency>
+        <!--fastjson-->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.2.51</version>
+        </dependency>
+
     </dependencies>
 
     <build>
